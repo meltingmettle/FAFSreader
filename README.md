@@ -3,4 +3,4 @@ Free &amp; For Sale Page Reader - Will scan the Facebook Page at an input rate a
 
 
 To be completed over the summer...
-Alex, let's do it! 
+Alex, let's do it! Ideally, during Spring Break, before everyone starts moving out and our freshmen start shopping for stuff. XD
