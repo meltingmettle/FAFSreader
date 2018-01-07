@@ -1,4 +1,19 @@
-Well, nothing much here....
+String html = "<p>An <a href='https://www.facebook.com/groups/BerkeleyFreeAndForSale/'><b>example</b></a> link.</p>";
+Document doc = Jsoup.parse(html); 
+String text = doc.body().text(); 
+
+//Need to authenticate via Facebook
+
+Document doc = Jsoup.connect("https://www.facebook.com/groups/BerkeleyFreeAndForSale/").get();
+log(doc.title());
+Elements description = doc.select("#mp-itn b a");
+for (Element item : description) {
+  log("%s\n\t%s", 
+    headline.attr("title"), headline.absUrl("href"));
+}
+
+
+
 
 Framework is as follows:
 Step 1: Build a messenger bot
@@ -8,7 +23,6 @@ Step 4: ????????
 Step 5: Profit
 
 
-Some links which I've been reading to figure out how to do all this stuff
 https://stackoverflow.com/questions/9825798/how-to-read-a-text-from-a-web-page-with-java
 https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html
 https://developers.facebook.com/docs/messenger-platform
