@@ -1,4 +1,4 @@
-# FAFSreader
+# Berkeley Free & For Sale Reader Bot
 Every May in the student community of UC Berkeley, the supply and demand curve gets dropped on it's head, and the market floods in a pattern that would give Robert Reich a migraine.  
 
 The combination of graduating seniors, wide-eyed freshmen moving into apartments, and the population's four-year wash cycle create an ever flourishing the market for college-student commodities.  Play your cards wisely, and you can snag an acoustic guitar for $5, a 21-gear bicycle for $30, a designer-brand backpack for $10, sectional couches and a $300 electric guitar for free! First come first serve! (If these standards mean nothing to you, it's like buying a year-old Prius for $3,000)
