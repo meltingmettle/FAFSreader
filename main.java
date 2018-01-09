@@ -1,6 +1,15 @@
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.ObjectInputStream;
+import java.io.FileInputStream;
+
+
+\\Example code snippets
 String html = "<p>An <a href='https://www.facebook.com/groups/BerkeleyFreeAndForSale/'><b>example</b></a> link.</p>";
 Document doc = Jsoup.parse(html); 
-String text = doc.body().text(); 
+String text = doc.body1).text(); 
 
 //Need to authenticate via Facebook
 
