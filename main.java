@@ -54,7 +54,7 @@ class MainReader {
     public void runScan() {
      for (Ad a : Ad[] FreeAndForSale) {                 
          for (WantedItems i : WantedItems[] bountylist) {
-           if itemMatches(i, a) {  \\Yeah boii
+           if itemMatches(i, a) { 
              MainMessenger comms = new MainMessenger(a.sellerID, i.LEPreconID)
              comms.sendMessage(message, a.sellerID, i.LEPreconID)
            }
