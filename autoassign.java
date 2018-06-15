@@ -10,9 +10,9 @@ class AutoAssign {
   \\If the page-parser detects a general location or an address, this will also autoassign and message the person who is closest and available to make the pick-up.
   \\Slightly easier variation of the messenger bot
    
-  protected database;            \\Let's not have our addresses floating on the internet :) 
+  private database;
    
-  private void deployScout(bool transport) {
+  private void assignPickup(bool transport) {
   \\Take in a house location, the point person, and then message the person.
   \\If it's a large item and we need a transport, it will message the closest person with a van.
   
@@ -28,7 +28,7 @@ class AutoAssign {
    
    private House nearestFOB(int[] dropCoords) {
       \\Find the nearest house.  Basic mathmatical function with a mapping. :)
-      return nearestBase
+      return nearesthouse
    }
    
  }
@@ -36,15 +36,15 @@ class AutoAssign {
  class House {
    int range;                   \\As a challenge, can we plug house to drop coordinates to Google Maps and accurately asses travel time?
    bool vehicle;
-   String headOfState;          \\Messenger profile of House Head
+   String head;          \\Messenger profile of House Head
    int[] coord;                 \\Throwback to Yelp Maps Project
    bool armor;
    
-   protected House(bool v, String hOS, int[] coordinates, bool bretheren) {
+   protected House(bool v, String head, int[] coordinates, bool vehicle) {
       this.vehicle = v;
-      this.headOfState = hOS
+      this.head = head
       this.coord = coordinates
-      this.armor = bretheren
+      this.vehicle = vehicle
    }
    
  
