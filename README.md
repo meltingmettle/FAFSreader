@@ -14,5 +14,5 @@ The moment a procrastinating senior places his Epiphone Les Paul or Sector 9 Lon
 
 (I furnished my entire apartment for less than $100. Bunk bed, desks, book shelves, guitar with stand, lamps, silverware, futon, coffee tables, and office chairs.  It's a pretty sweet gig)
 
-To be completed over the summer...
-Alex, let's do it! Ideally, during Spring Break, before everyone starts moving out and our freshmen start shopping for their apartments.
+Currently in development.  System is switching to Python.  
+The basic framework consists of a main class, a page reader, and two messenger bots, one to message the app user, and another to message the item seller.
