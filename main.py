@@ -89,7 +89,7 @@ class InternalMessengerBot
 #This fellow might require a fake account.
   def __init__(self):
     return "My job is to message the client!"
-  def
+  
 
 #A particularly well-designed Messenger Bot made by Wilson for a Hackathon
 #We can do this in Python or Javascript.  
