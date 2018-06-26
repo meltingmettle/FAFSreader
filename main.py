@@ -21,6 +21,21 @@ Reader will read Free and For Sale, then if it finds an item, it will generate a
 The messenger bot will tell the user that an item has been found, and it will message the seller expressing interest in buying.  
 
 """
+"""
+Page Reader docs:  Check out Beautiful Soup toolkit!
+https://stackoverflow.com/questions/20045955/regex-pattern-in-python-for-parsing-html-title-tags
+https://developers.facebook.com/docs/messenger-platform/reference/send-api/
+
+Google Spreadsheet API docs
+https://developers.google.com/api-client-library/python/apis/sheets/v4
+https://developers.google.com/sheets/api/quickstart/python
+
+Messenger Bots docs
+http://bottr.co/
+https://github.com/geeknam/messengerbot
+https://github.com/AmaJC/BudgetBot/blob/master/budgetbot1/app.js
+
+"""
 
 class Main:
   def __init__(self):
@@ -61,10 +76,6 @@ class Items:
           items.append(v)
     
 
-  
-  #To get started
-  #https://developers.google.com/api-client-library/python/apis/sheets/v4
-  #https://developers.google.com/sheets/api/quickstart/python
  
 class Reader:
    def __init__(self):
@@ -89,11 +100,6 @@ class InternalMessengerBot:
 #This fellow might require a fake account.
   def __init__(self):
     return "My job is to message the client!"
-  
-
-#A particularly well-designed Messenger Bot made by Wilson for a Hackathon
-#We can do this in Python or Javascript.  
-#https://github.com/AmaJC/BudgetBot/blob/master/budgetbot1/app.js
 
 class ExternalMessengerBot:
 #This will require a Messenger Account to be linked
@@ -109,5 +115,4 @@ class ExternalMessengerBot:
 @cici_senor
 @wilsonw926
 
-#https://stackoverflow.com/questions/20045955/regex-pattern-in-python-for-parsing-html-title-tags
-#https://developers.facebook.com/docs/messenger-platform/reference/send-api/
+
