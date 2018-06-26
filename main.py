@@ -2,6 +2,13 @@ from __future__ import print_function
 from apiclient.discovery import build
 from httplib2 import Http
 from oauth2client import file, client, tools
+"""
+#PROJECT LIST
+#For now, the messenger source and user will be hard-coded. 
+1. HTML Parser - the actual page reader.  Read the page and find desired items (considering typos) and the seller's messenger ID
+2. Messenger Bots - use bottr.io. Create two messenging bots, one to message the seller and one to message the user. May require creating or linking to a FB account
+3. Spreadsheet API implementation.  Read items and/or pricing or other parameters off a Google Spreadsheet.  Next-level involves allowing users to put their FBID on the sheet and get directly messaged instead of hard-code
+"""
 
 
 #Switch to Python. 
@@ -9,10 +16,6 @@ from oauth2client import file, client, tools
 #For now, default to messaging one person. 
 #Hard code items, and notifications.  Currently no price cap, since we're aiming for "larger" items.
 #To be completed Winter Break 2018....
-
-#Spreadsheet API implementation
-#HTML Parser - the actual page reader
-#Messenger Bots - use bottr.io
 
 
 
