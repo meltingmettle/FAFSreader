@@ -73,14 +73,18 @@ class Items:
 class Reader:
    def __init__(self):
       return None
+   
+   def read():
+      #Put the HTML parser here.
+      return None
     
-  def hit(x):
-    #Array values are in descending order as specified by the range 
-    messenger1 = InternalMessengerBot() #Pass in Item name
-    messenger2 = ExternalMessengerBot() #Pass in User ID and Item Name or Message
-    messenger1.sendMessage()
-    messenger2.sendMessage()
-    return None
+   def success(x):
+      #Array values are in descending order as specified by the range 
+      messenger1 = InternalMessengerBot() #Pass in Item name
+      messenger2 = ExternalMessengerBot() #Pass in User ID and Item Name or Message
+      messenger1.sendMessage()
+      messenger2.sendMessage()
+      return None
   #This will return the Spreadsheet index of the found item when an item is found
   #values = result.get('values', [])
     
