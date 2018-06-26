@@ -10,6 +10,11 @@ from oauth2client import file, client, tools
 #Hard code items, and notifications.  Currently no price cap, since we're aiming for "larger" items.
 #To be completed Winter Break 2018....
 
+#Spreadsheet API implementation
+#HTML Parser - the actual page reader
+#Messenger Bots - use bottr.io
+
+
 
 class Main:
   def __init__(self):
