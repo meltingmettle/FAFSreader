@@ -12,19 +12,13 @@ import time
 3. Spreadsheet API implementation.  Read items and/or pricing or other parameters off a Google Spreadsheet.  Next-level involves allowing users to put their FBID on the sheet and get directly messaged instead of hard-code
 """
 
-
-#Switch to Python. 
-#Use HTML parser on FAFS.
-#For now, default to messaging one person. 
-#Hard code items, and notifications.  Currently no price cap, since we're aiming for "larger" items.
-#To be completed Winter Break 2018....
-
 """
 Architecture notes:
-Main will be called upon execution of the program. 
-Every day around 3:00PM, FAFSreader will check the spreadsheet for updates on items or users
-Main will periodically call Reader().read passing in parameters from the spreadsheet, which will read FAFS and look for said items.
-Reader will read Free and For Sale, then if it finds an item, it will generate a messenger bot with the user's id and a bot with the seller's id, messaging both. 
+Main will be called upon execution of the program. A Reader and SpreadsheetReader will be created. 
+Every day around 3:00PM, FAFSreader will call spreadsheet.update() for updates on items or users
+Main will periodically call Reader().read which will read FAFS and look for said items.
+Reader will read Free and For Sale, then if it finds an item, it will generate a messenger bot with the user's id and a bot with the seller's id.
+The messenger bot will tell the user that an item has been found, and it will message the seller expressing interest in buying.  
 
 """
 
@@ -42,6 +36,8 @@ class SpreadsheetReader:
   def __init__(self, sheet_url):
     self.sheet = sheet_url
     #Add reader here
+  def update(self):
+    return "Update items and users from spreadsheet"
   
 class Items:
   #Will read items off a Google Doc
