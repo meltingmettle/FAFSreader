@@ -85,7 +85,7 @@ class Reader:
   #values = result.get('values', [])
     
 #Use Messenger API
-class InternalMessengerBot
+class InternalMessengerBot:
 #This fellow might require a fake account.
   def __init__(self):
     return "My job is to message the client!"
