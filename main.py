@@ -2,6 +2,8 @@ from __future__ import print_function
 from apiclient.discovery import build
 from httplib2 import Http
 from oauth2client import file, client, tools
+import time
+
 """
 #PROJECT LIST
 #For now, the messenger source and user will be hard-coded. 
@@ -17,12 +19,29 @@ from oauth2client import file, client, tools
 #Hard code items, and notifications.  Currently no price cap, since we're aiming for "larger" items.
 #To be completed Winter Break 2018....
 
+"""
+Architecture notes:
+Main will be called upon execution of the program. 
+Every day around 3:00PM, FAFSreader will check the spreadsheet for updates on items or users
+Main will periodically call Reader().read passing in parameters from the spreadsheet, which will read FAFS and look for said items.
+Reader will read Free and For Sale, then if it finds an item, it will generate a messenger bot with the user's id and a bot with the seller's id, messaging both. 
 
+"""
 
 class Main:
   def __init__(self):
-    self.reader = Reader()  #Constant.  The page should more or less always be the same
+    self.reader = Reader()  #Constant.  The page should more or less always be the same. Will update if URl changes.
     self.itemList = Items("url to spreadsheet") #Possibly need login
+    while true:
+      time.sleep(600)
+      reader.run()
+      #Run the reader every 10 minutes
+      
+    
+class SpreadsheetReader:
+  def __init__(self, sheet_url):
+    self.sheet = sheet_url
+    #Add reader here
   
 class Items:
   #Will read items off a Google Doc
