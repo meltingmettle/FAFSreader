@@ -4,6 +4,9 @@ from httplib2 import Http
 from oauth2client import file, client, tools
 import time
 
+
+#IMPORTANT: Active repo moved to private repository to protect authentication keys.  Message me and I'll add you as a contributor!
+
 """
 #PROJECT LIST
 I'm currently implementing the Facebook Page reader.  
