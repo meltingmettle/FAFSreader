@@ -13,6 +13,7 @@ Unfortunately, later on we might need to move to a private repo to protect acces
    - Read .json files and extract the item, price, and seller ID.  Check out this post on web-scraping: https://github.com/minimaxir/facebook-page-post-scraper/blob/master/examples/how_to_build_facebook_scraper.ipynb
 2. Messenger Bots - use bottr.io. Create two messenging bots, one to message the seller and one to message the user. May require creating or linking to a FB account
    - Involves autheticating two app-bots. 
+   - Parse and send a message and possibly include a screenshot/link to the post
 3. Spreadsheet API implementation.  Read items and/or pricing or other parameters off a Google Spreadsheet.  Next-level involves allowing users to put their FBID on the sheet and get directly messaged instead of hard-code
    - More tedious authentication procedure, but shouldn't be too difficult. Check out the docs provided below.
 """
