@@ -43,10 +43,12 @@ https://github.com/AmaJC/BudgetBot/blob/master/budgetbot1/app.js
 
 """
 
+#TODO: create an algorithm to discern price.  (IE Some posts say "$40 amp and $15 cables", while others will say "bike - $60, table $10")
 class Main:
   def __init__(self):
-    self.reader = Reader()  #Constant.  The page should more or less always be the same. Will update if URl changes.
     self.itemList = Items("url to spreadsheet") #Possibly need login
+    self.reader = Reader(self.itemList)  #Constant.  The page should more or less always be the same. Will update if URl changes.
+
     while true:
       time.sleep(600)
       reader.run()
@@ -62,7 +64,7 @@ class SpreadsheetReader:
   
 class Items:
   #Will read items off a Google Doc
-  items = []
+  wantedItems = []
   def __init__(self, spreadsheetID, itemRange): #Add price cap column later
     #Populate the list. Can add a price filter later. 
     # Setup the Sheets API
@@ -79,20 +81,44 @@ class Items:
     RANGE_NAME = 'Class Data!A2:E'
     result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID, range=RANGE_NAME).execute()
         for v in values:
-          items.append(v)
+          wantedItems.append(v)
     
 
- 
-class Reader:
-   def __init__(self):
-      return None
+class Item:
+   def __init__(self, self.name, self.seller_id, self.price)
    
-   def read():
-      #Put the HTML parser here.
+class Reader:
+   def __init__(self, wantedItems):
+      self.items = wantedItems
+      self.pageResults = {} #Key should be string of item name, value should be Item object with all parameters
       return None
-    
-   def success(x):
+          
+   def pageRequest():
+      #This will return a huge list/file of item names and corresponding item objects
+      results = "not quite there yet"                    
+      return read(results)
+   
+   def read(posts):
+      #Take in page data and format it. Read the item names, adding the name to pageResults, and creating an Item object to add to pageResultsList.
+      #["guitar", "chairs", "move-out sale", "help needed moving", "
+      #Sequence should be ["item", "seller ID"]
+      
+      hits = []
+      #Put the HTML parser here.
+      #TODO Split by words and search each word individually
+      #How can we narrow down the searcH? (IE Dining table, and not table, folding table, broken table)
+      
+      
+   def search():
+      for i in items:
+         if i in pageResults:
+            success(pageResults[i])
+      return None
+
+     
+   def success(x): #Input is an item object with item, price, and seller ID
       #Array values are in descending order as specified by the range 
+      #TODO: Avoid annoying false negatives
       messenger1 = InternalMessengerBot() #Pass in Item name
       messenger2 = ExternalMessengerBot() #Pass in User ID and Item Name or Message
       messenger1.sendMessage()
