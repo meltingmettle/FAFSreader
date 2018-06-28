@@ -6,10 +6,15 @@ import time
 
 """
 #PROJECT LIST
-#For now, the messenger source and user will be hard-coded. 
-1. HTML Parser - the actual page reader.  Check out BeautifulSoup.  Read the page and find desired items (considering typos) and the seller's messenger ID
+I'm currently implementing the Facebook Page reader.  
+Unfortunately, later on we might need to move to a private repo to protect access tokens, but we can make a public copy. 
+
+1. HTML Parser - Check out BeautifulSoup.  Read the page and find desired items (considering typos) and the seller's messenger ID
+   - Read .json files and extract the item, price, and seller ID.  Check out this post on web-scraping: https://github.com/minimaxir/facebook-page-post-scraper/blob/master/examples/how_to_build_facebook_scraper.ipynb
 2. Messenger Bots - use bottr.io. Create two messenging bots, one to message the seller and one to message the user. May require creating or linking to a FB account
+   - Involves autheticating two app-bots. 
 3. Spreadsheet API implementation.  Read items and/or pricing or other parameters off a Google Spreadsheet.  Next-level involves allowing users to put their FBID on the sheet and get directly messaged instead of hard-code
+   - More tedious authentication procedure, but shouldn't be too difficult. Check out the docs provided below.
 """
 
 """
