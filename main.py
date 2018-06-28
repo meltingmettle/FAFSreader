@@ -48,7 +48,7 @@ class Main:
   def __init__(self):
     self.itemList = Items("url to spreadsheet") #Possibly need login
     self.reader = Reader(self.itemList)  #Constant.  The page should more or less always be the same. Will update if URl changes.
-
+    #Refresh itemslist?
     while true:
       time.sleep(600)
       reader.run()
@@ -85,7 +85,20 @@ class Items:
     
 
 class Item:
-   def __init__(self, self.name, self.seller_id, self.price)
+   def __init__(self, name, seller_id, price):
+      self.name = name
+      self.seller_id = seller_id
+      self.price = price
+   
+   def getName(self):
+      return self.name
+   
+   def getSeller_id(self):
+      return self.sellerID
+   
+   def getPrice(self):
+      return self.price
+   
    
 class Reader:
    def __init__(self, wantedItems):
@@ -100,19 +113,18 @@ class Reader:
    
    def read(posts):
       #Take in page data and format it. Read the item names, adding the name to pageResults, and creating an Item object to add to pageResultsList.
-      #["guitar", "chairs", "move-out sale", "help needed moving", "
-      #Sequence should be ["item", "seller ID"]
+      #Dictionary format should be {"guitar": <Item object ... "guitar">, "chairs" : <Item object ..>}"
       
-      hits = []
       #Put the HTML parser here.
       #TODO Split by words and search each word individually
       #How can we narrow down the searcH? (IE Dining table, and not table, folding table, broken table)
-      
+      search()
       
    def search():
       for i in items:
          if i in pageResults:
             success(pageResults[i])
+      pageResults = {}
       return None
 
      
